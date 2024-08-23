@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Pruning Prioritization Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .section p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .section ul {
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .diagram {
+            text-align: center;
+        }
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .diagram .arrow {
+            stroke: #333;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tree Pruning Prioritization Solution</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="section">
+                <h2>Solution Overview</h2>
+                <p>
+                    Our solution provides a comprehensive approach to tree pruning prioritization and vegetation management. By leveraging a multi-criteria approach, it optimizes maintenance decisions for electrical networks and other areas requiring environmental upkeep, such as highways, railways, urban green spaces, telecommunications lines, industrial sites, airports, and water reservoir areas.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Technical Description</h2>
+                <p>
+                    The solution integrates seamlessly with IBM EIS – Vegetation Management to enhance and refine vegetation management plans. It imports data from shapefiles provided by EIS Vegetation, processes it to include additional criteria such as social and biotechnical factors, and generates optimized pruning plans. This process ensures that maintenance is both efficient and effective.
+                </p>
+                <ul>
+                    <li><strong>Shapefile Importer:</strong> Imports data from shapefiles provided by IBM EIS – Vegetation Management. This block receives the shapefile data and prepares it for processing.</li>
+                    <li><strong>Multi-criteria optmizer:</strong> Applies a multi-criteria approach to the imported data, considering social, environmental, and biotechnical factors. This block refines the data to create actionable pruning plans.</li>
+                    <li><strong>Plan Generator:</strong> Uses the refined data to generate detailed pruning plans and recommendations for maintenance tasks.</li>
+                    <li><strong>Outputs and Implementation:</strong> Delivers the final pruning plans and reports. These outputs are made accessible via the SaaS platform for implementation and ongoing management.</li>
+                </ul>
+            </div>
+
+            <div class="section diagram">
+                <h2>Block Diagram</h2>
+                <svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Shapefile Importer Block -->
+                    <rect x="300" y="50" width="200" height="100" fill="#2196F3" stroke="#333" stroke-width="2"/>
+                    <text x="400" y="90" fill="#fff" font-size="16" text-anchor="middle">Shapefile</text>
+                    <text x="400" y="110" fill="#fff" font-size="14" text-anchor="middle">Importer</text>
+
+                    <!-- Arrow from EIS Vegetation -->
+                    <line x1="200" y1="100" x2="285" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                    <text x="150" y="105" fill="#333" font-size="14" text-anchor="middle">Shapefile</text>
+                    <text x="150" y="120" fill="#333" font-size="12" text-anchor="middle">from EIS Vegetation</text>
+
+                    <!-- Arrow to Data Processor -->
+                    <line x1="400" y1="150" x2="400" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+                    <!-- Data Processor Block -->
+                    <rect x="300" y="200" width="200" height="150" fill="#FFC107" stroke="#333" stroke-width="2"/>
+                    <text x="400" y="240" fill="#333" font-size="16" text-anchor="middle">Multi-Criteria</text>
+                    <text x="400" y="260" fill="#333" font-size="14" text-anchor="middle">Optimizer</text>
+                    <text x="400" y="295" fill="#333" font-size="12" text-anchor="middle">- Refinement</text>
+                    <text x="400" y="310" fill="#333" font-size="12" text-anchor="middle">- Analysis</text>
+					
+                    <!-- Arrow from social & biotechnical factors -->
+                    <line x1="200" y1="280" x2="285" y2="280" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                    <text x="150" y="285" fill="#333" font-size="14" text-anchor="middle">Soical</text>
+                    <text x="150" y="300" fill="#333" font-size="12" text-anchor="middle">and biotechnical factors</text>					
+
+                    <!-- Arrow -->
+                    <line x1="400" y1="350" x2="400" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+                    <!-- Plan Generator Block -->
+                    <rect x="300" y="400" width="200" height="100" fill="#FF5722" stroke="#333" stroke-width="2"/>
+                    <text x="400" y="440" fill="#fff" font-size="16" text-anchor="middle">Plan</text>
+                    <text x="400" y="460" fill="#fff" font-size="14" text-anchor="middle">Generator</text>
+
+                    <!-- Arrow -->
+                    <line x1="400" y1="500" x2="400" y2="550" stroke="#333" stroke-width="2"/>
+
+                    <!-- Outputs and Implementation Block -->
+                    <rect x="300" y="550" width="200" height="150" fill="#9C27B0" stroke="#333" stroke-width="2"/>
+                    <text x="400" y="590" fill="#fff" font-size="16" text-anchor="middle">Outputs and</text>
+                    <text x="400" y="610" fill="#fff" font-size="14" text-anchor="middle">Implementation</text>
+                    <text x="400" y="630" fill="#fff" font-size="12" text-anchor="middle">- Pruning Plans</text>
+                    <text x="400" y="645" fill="#fff" font-size="12" text-anchor="middle">- Reports</text>
+
+                    <!-- Arrow Definition -->
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" fill="#333">
+                            <path d="M0,0 L0,6 L9,3 z"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
