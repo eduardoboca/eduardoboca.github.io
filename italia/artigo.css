@@ -1,0 +1,88 @@
+/* Estilo geral para o corpo da página do artigo */
+body.blog-article {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Estilos para a seção do artigo */
+.blog-article {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left; /* Alinha o texto à esquerda para parecer mais um artigo de blog */
+}
+
+/* Estilos para o título principal */
+.blog-article h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 2px solid #006400; /* Adiciona uma linha embaixo do título para destacá-lo */
+    padding-bottom: 10px;
+}
+
+/* Estilos para subtítulos */
+.blog-article h4 {
+    color: #006400;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Estilo dos parágrafos */
+.blog-article p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilos para imagens do artigo */
+.blog-article .section-image {
+    width: 40%;
+    max-width: 80%; /* Limita o tamanho das imagens para melhor encaixe */
+    height: auto;
+    margin: 20px 0;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o texto da curiosidade */
+.blog-article .curiosidade-texto {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilos para os itens de curiosidades */
+.blog-article .curiosidade-item {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Estilos para links */
+.blog-article .curiosidade-texto a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.blog-article .curiosidade-texto a:hover {
+    color: #FF6347;
+}
