@@ -1,0 +1,88 @@
+/* Estilo para as seções de programação diárias */
+.dia-programacao {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para os títulos de cada dia */
+  .dia-programacao h3 {
+    font-size: 1.5rem;
+    color: #006400;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Estilo para as tabelas de programação */
+  .tabela-programacao {
+    width: 80%; /* Define uma largura menor para a tabela */
+    max-width: 800px; /* Limita a largura máxima da tabela */
+    margin: 0 auto 20px auto; /* Centraliza a tabela */
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .tabela-programacao th, .tabela-programacao td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .tabela-programacao th {
+    background-color: #006400;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+  
+  .tabela-programacao tr:nth-child(even) {
+    background-color: #f7f7f7; /* Suave contraste para as linhas pares */
+  }
+  
+  .tabela-programacao td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabela-programacao tr:last-child td {
+    border-bottom: none; /* Remove a linha da última linha da tabela */
+  }
+  
+  .tabela-programacao tr:hover {
+    background-color: #f0f0f0; /* Suave mudança de cor ao passar o mouse */
+  }
+  
+  /* Estilo para links dentro das seções de programação */
+  .section a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .section a:hover {
+    color: #FF6347;
+  }
+  
+  /* Estilo responsivo para tabelas */
+  @media screen and (max-width: 768px) {
+    .dia-programacao h3 {
+      font-size: 1.3rem;
+    }
+  
+    .tabela-programacao {
+      width: 95%; /* Reduz a largura da tabela em telas menores */
+    }
+  
+    .tabela-programacao th, .tabela-programacao td {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  
