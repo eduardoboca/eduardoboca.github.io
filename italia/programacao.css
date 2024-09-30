@@ -5,11 +5,13 @@
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Limita a largura máxima para centralizar e melhorar a leitura */
+    margin: 20px auto; /* Centraliza a seção na tela */
 }
 
 /* Estilo para os títulos de cada dia */
 .dia-programacao h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #006400;
     margin-bottom: 15px;
     text-align: center;
@@ -17,11 +19,9 @@
 
 /* Estilo para as tabelas de programação */
 .tabela-programacao {
-    width: 100%; /* Preenche toda a largura disponível em telas menores */
-    max-width: 800px; /* Limita a largura máxima da tabela */
-    margin: 0 auto 20px auto;
-    border-collapse: separate;
-    border-spacing: 0;
+    width: 100%; /* Define que a tabela ocupe toda a largura do contêiner */
+    border-collapse: collapse;
+    margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -29,8 +29,8 @@
 }
 
 .tabela-programacao th, .tabela-programacao td {
-    padding: 15px 20px;
-    text-align: left;
+    padding: 15px;
+    text-align: center; /* Centraliza o texto dentro das células */
     font-size: 1rem;
 }
 
@@ -50,10 +50,22 @@
     background-color: #f0f0f0;
 }
 
-/* Media Query para tabelas em telas menores */
+/* Ajustes de espaçamento entre o texto e elementos vizinhos */
+.dia-programacao p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Estilo responsivo para tabelas */
 @media screen and (max-width: 768px) {
+    .dia-programacao {
+        padding: 15px;
+    }
+
     .tabela-programacao {
-        width: 95%;
+        width: 100%; /* Preenche a largura da tela */
     }
 
     .tabela-programacao th, .tabela-programacao td {
@@ -62,6 +74,30 @@
     }
 
     .dia-programacao h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
+}
+
+/* Estilo para links */
+.section a {
+    color: #006400;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.section a:hover {
+    color: #FF6347;
+}
+
+/* Estilo para a lista de distâncias */
+.distancias-lista {
+    list-style: none; /* Remove os bullets */
+    padding: 0;
+    margin-left: 15px;
+}
+
+.distancias-lista li {
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
