@@ -13,9 +13,10 @@ body.blog-article {
     padding: 40px 20px;
     background-color: #ffffff;
     margin: 20px auto;
+    max-width: 800px; /* Limita a largura máxima para facilitar a leitura */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    text-align: left; /* Alinha o texto à esquerda para parecer mais um artigo de blog */
+    text-align: left;
 }
 
 /* Estilos para o título principal */
@@ -26,7 +27,7 @@ body.blog-article {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: left;
-    border-bottom: 2px solid #006400; /* Adiciona uma linha embaixo do título para destacá-lo */
+    border-bottom: 2px solid #006400;
     padding-bottom: 10px;
 }
 
@@ -37,52 +38,47 @@ body.blog-article {
     margin-bottom: 15px;
     font-size: 1.8rem;
     font-weight: 600;
-    text-align: left;
 }
 
 /* Estilo dos parágrafos */
 .blog-article p {
     font-size: 1rem;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 /* Estilos para imagens do artigo */
 .blog-article .section-image {
-    width: 30%;
-    max-width: 80%; /* Limita o tamanho das imagens para melhor encaixe */
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho das imagens para melhor encaixe */
     height: auto;
-    margin: 20px 0;
+    margin: 20px auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para o texto da curiosidade */
+/* Estilos para curiosidades */
 .blog-article .curiosidade-texto {
     font-size: 1.1rem;
     margin-top: 20px;
     text-align: left;
 }
 
-/* Estilos para os itens de curiosidades */
-.blog-article .curiosidade-item {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .blog-article {
+        padding: 20px 10px;
+    }
 
-/* Estilos para links */
-.blog-article .curiosidade-texto a {
-    color: #006400;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    .blog-article h3 {
+        font-size: 2rem;
+    }
 
-.blog-article .curiosidade-texto a:hover {
-    color: #FF6347;
+    .blog-article h4 {
+        font-size: 1.5rem;
+    }
+
+    .blog-article .section-image {
+        max-width: 90%;
+    }
 }
