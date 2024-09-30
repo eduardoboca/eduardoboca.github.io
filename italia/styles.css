@@ -24,7 +24,23 @@ body {
   padding: 0 20px;
 }
 
-.nav ul {
+.logo {
+  text-align: center;
+  width: 100%; /* Garante que o título seja centralizado em dispositivos móveis */
+}
+
+.hamburger {
+  display: none; /* Oculto em telas maiores */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  order: -1; /* Move o botão do menu hambúrguer para o lado esquerdo */
+}
+
+/* Estilo para o menu de navegação */
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,18 +49,18 @@ body {
   justify-content: center;
 }
 
-.nav ul li {
+.nav-list li {
   margin: 10px; /* Ajustado para espaço consistente em telas menores */
 }
 
-.nav ul li a {
+.nav-list li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav ul li a:hover {
+.nav-list li a:hover {
   color: #b22222;
 }
 
@@ -84,29 +100,73 @@ body {
   color: #006400;
 }
 
-/* Media Queries para tornar o layout responsivo */
-@media (max-width: 768px) {
+/* Estilo para o Botão do Menu Hambúrguer */
+.hamburger {
+  display: none; /* Oculto em telas maiores */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Menu para telas menores */
+@media screen and (max-width: 768px) {
   .header .container {
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center; /* Centraliza o título */
   }
 
-  .hero {
-      padding: 40px 20px;
+  .hamburger {
+    display: block;
+    align-self: flex-start; /* Alinha o hambúrguer à esquerda */
   }
 
-  .hero-content {
-      padding: 15px;
+  .nav {
+    display: none; /* Menu oculto por padrão */
+    width: 100%;
   }
 
-  .nav ul {
-      flex-direction: column;
+  .nav.active {
+    display: block; /* Exibe o menu quando ativo */
   }
 
-  .nav ul li {
-      margin: 5px 0;
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center; /* Centraliza os itens do menu */
   }
 
-  .section {
-      padding: 20px 10px;
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  .nav-list li a {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Estilo responsivo para tabelas */
+@media screen and (max-width: 768px) {
+  .tabela-programacao {
+    overflow-x: auto; /* Permite rolagem horizontal para evitar que a tabela quebre */
+    white-space: nowrap; /* Impede quebra de linha */
+  }
+
+  .tabela-programacao th, .tabela-programacao td {
+    font-size: 0.8rem; /* Reduz o tamanho da fonte */
+    padding: 8px; /* Reduz o padding para caber melhor na tela */
+  }
+
+  .dia-programacao h3 {
+    font-size: 1.3rem;
+  }
+
+  .distancias-lista li {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte das distâncias */
   }
 }

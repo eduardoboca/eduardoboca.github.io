@@ -35,4 +35,7 @@ function includeHTML() {
   // Chama a função includeHTML quando a página é carregada
   document.addEventListener("DOMContentLoaded", includeHTML);
   
-  
+  function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('active');
+}

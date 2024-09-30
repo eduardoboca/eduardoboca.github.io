@@ -7,18 +7,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 900px; /* Limita a largura máxima para centralizar e melhorar a leitura */
     margin: 20px auto; /* Centraliza a seção na tela */
-}
-
-/* Estilo para os títulos de cada dia */
-.dia-programacao h3 {
+  }
+  
+  /* Estilo para os títulos de cada dia */
+  .dia-programacao h3 {
     font-size: 1.7rem;
     color: #006400;
     margin-bottom: 15px;
     text-align: center;
-}
-
-/* Estilo para as tabelas de programação */
-.tabela-programacao {
+  }
+  
+  /* Estilo para as tabelas de programação */
+  .tabela-programacao {
     width: 100%; /* Define que a tabela ocupe toda a largura do contêiner */
     border-collapse: collapse;
     margin: 0 auto;
@@ -26,78 +26,82 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-}
-
-.tabela-programacao th, .tabela-programacao td {
+  }
+  
+  .tabela-programacao th, .tabela-programacao td {
     padding: 15px;
     text-align: center; /* Centraliza o texto dentro das células */
     font-size: 1rem;
-}
-
-.tabela-programacao th {
+  }
+  
+  .tabela-programacao th {
     background-color: #006400;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-}
-
-.tabela-programacao tr:nth-child(even) {
+  }
+  
+  .tabela-programacao tr:nth-child(even) {
     background-color: #f7f7f7;
-}
-
-.tabela-programacao tr:hover {
+  }
+  
+  .tabela-programacao tr:hover {
     background-color: #f0f0f0;
-}
-
-/* Ajustes de espaçamento entre o texto e elementos vizinhos */
-.dia-programacao p {
+  }
+  
+  /* Ajustes de espaçamento entre o texto e elementos vizinhos */
+  .dia-programacao p {
     margin-top: 15px;
     font-size: 1.1rem;
     text-align: left;
     padding-left: 20px;
-}
-
-/* Estilo responsivo para tabelas */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Estilo responsivo para tabelas */
+  @media screen and (max-width: 768px) {
     .dia-programacao {
-        padding: 15px;
+      padding: 15px;
     }
-
+  
     .tabela-programacao {
-        width: 100%; /* Preenche a largura da tela */
+      width: 100%; /* Preenche a largura da tela */
+      display: block; /* Garante que a tabela se comporte bem em telas menores */
+      overflow-x: auto; /* Adiciona rolagem horizontal apenas quando necessário */
     }
-
+  
     .tabela-programacao th, .tabela-programacao td {
-        font-size: 0.9rem;
-        padding: 10px;
+      font-size: 0.9rem;
+      padding: 10px;
+      min-width: 120px; /* Define uma largura mínima para evitar colunas muito pequenas */
     }
-
+  
     .dia-programacao h3 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-}
-
-/* Estilo para links */
-.section a {
+  }
+  
+  /* Estilo para links */
+  .section a {
     color: #006400;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
-}
-
-.section a:hover {
+  }
+  
+  .section a:hover {
     color: #FF6347;
-}
-
-/* Estilo para a lista de distâncias */
-.distancias-lista {
+  }
+  
+  /* Estilo para a lista de distâncias */
+  .distancias-lista {
     list-style: none; /* Remove os bullets */
     padding: 0;
     margin-left: 15px;
-}
-
-.distancias-lista li {
+  }
+  
+  .distancias-lista li {
     font-size: 1rem;
     margin-bottom: 10px;
-}
+  }
+  
