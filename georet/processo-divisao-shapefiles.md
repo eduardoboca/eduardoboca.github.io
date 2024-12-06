@@ -25,8 +25,8 @@ A divisão macro será realizada com base em critérios já estabelecidos, como 
 ---
 
 ### **3. Controle de Operadores**
-1. **Estrutura de Pastas Automatizada:**
-   - O software criará uma estrutura de pastas para cada operador, com subpastas para pendentes e concluídos:
+1. **Estrutura de Pastas**
+   - Haverá uma estrutura de pastas para cada operador, com subpastas para pendentes e concluídos:
      ```
      operador_nome/
      ├── pendentes/
