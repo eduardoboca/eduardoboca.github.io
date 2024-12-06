@@ -58,20 +58,7 @@ A divisão macro será realizada com base em critérios já estabelecidos, como 
 
 ---
 
-### **5. Ferramentas Necessárias**
-1. **Software para a Automação:**
-   - Desenvolver ou adaptar um script em Python utilizando bibliotecas como **Geopandas** e **Shapely**:
-     - Geopandas: Para manipulação de shapefiles.
-     - Shapely: Para criar a grade e dividir os pontos nos "clips".
-   - Interface gráfica (opcional): Poderia ser implementada com ferramentas como PyQt ou Tkinter, para facilitar a atribuição e o controle dos operadores.
-
-2. **Armazenamento e Organização:**
-   - Utilizar um sistema de arquivos estruturado localmente ou em um servidor compartilhado.
-   - Opcional: Um banco de dados simples para rastrear o progresso dos operadores (ex.: SQLite).
-
----
-
-### **6. Fluxo Semanal do Processo**
+### **5. Fluxo Semanal do Processo**
 1. **Divisão Macro:** Realizada com base nos critérios existentes.
 2. **Divisão Micro:** Software cria os clips para cada operador.
 3. **Distribuição:** Clips pendentes são alocados nas pastas dos operadores.
@@ -79,10 +66,4 @@ A divisão macro será realizada com base em critérios já estabelecidos, como 
 5. **Atualização Semanal:** Clips concluídos são mesclados pelo software e entregues como shapefile consolidado.
 
 ---
-
-### **Benefícios**
-- **Carga de Trabalho Balanceada:** Garantia de que todos os operadores tenham uma quantidade similar de trabalho.
-- **Maior Controle:** Rastreio do progresso por operador e por clip.
-- **Automação:** Redução do esforço manual na divisão e na mesclagem.
-- **Organização:** Estrutura clara de pastas e arquivos facilita a gestão do trabalho.
 
