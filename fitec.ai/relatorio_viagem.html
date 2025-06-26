@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório de Viagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, button {
+      padding: 6px 10px;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    #erro {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Relatório de Viagem</h2>
+
+  <label for="id_viagem">ID da Viagem:</label>
+  <input type="text" id="id_viagem" placeholder="Ex: 12345" />
+  <button onclick="carregarRelatorio()">Buscar</button>
+
+  <div id="erro"></div>
+
+  <table id="tabelaRelatorio" style="display: none;">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script>
+    // 🔧 Substitua com seus dados reais da Supabase:
+    const SUPABASE_URL = 'https://kyxssomeuirsikuxewmd.supabase.co';  // exemplo: https://xyzcompany.supabase.co
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt5eHNzb21ldWlyc2lrdXhld21kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3NTgzNjAsImV4cCI6MjA2NTMzNDM2MH0.ecUi_SSpLQzoXPv6Kiob0QiTcLpYi7yyvSw1hbYsC2I';
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    async function carregarRelatorio() {
+      const idViagem = document.getElementById('id_viagem').value.trim();
+      const tabela = document.getElementById('tabelaRelatorio');
+      const corpo = tabela.querySelector('tbody');
+      const erro = document.getElementById('erro');
+
+      erro.textContent = '';
+      corpo.innerHTML = '';
+      tabela.style.display = 'none';
+
+      if (!idViagem) {
+        erro.textContent = 'Por favor, informe o ID da viagem.';
+        return;
+      }
+
+	const { data, error } = await supabaseClient
+	  .from('relatorio_viagens')
+	  .select('*')
+	  .eq('id_viagem', idViagem);
+
+	if (error) {
+	  erro.textContent = 'Erro ao buscar os dados: ' + error.message;
+	  return;
+	}
+
+	if (!data || data.length === 0) {
+	  erro.textContent = 'Nenhuma despesa encontrada para esse ID.';
+	  return;
+	}
+
+	data.forEach(item => {
+	  const linha = `
+		<tr>
+		  <td>${new Date(item.data).toLocaleDateString()}</td>
+		  <td>${item.categoria}</td>
+		  <td>R$ ${(Number(item.valor)).toFixed(2)}</td>
+		  <td>${item.descricao}</td>
+		</tr>
+	  `;
+	  corpo.innerHTML += linha;
+	});
+
+	tabela.style.display = 'table';
+
+    }
+  </script>
+</body>
+</html>
