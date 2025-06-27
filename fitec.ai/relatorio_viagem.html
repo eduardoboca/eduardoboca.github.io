@@ -54,6 +54,7 @@
         <th>Categoria</th>
         <th>Valor</th>
         <th>Descrição</th>
+		<th>Comprovante</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -104,6 +105,7 @@
 		  <td>${item.categoria}</td>
 		  <td>R$ ${(Number(item.valor)).toFixed(2)}</td>
 		  <td>${item.descricao}</td>
+		  <td><a href="${item.image_url}" target="_blank">Ver imagem</a></td>		  
 		</tr>
 	  `;
 	  corpo.innerHTML += linha;
